@@ -1,0 +1,91 @@
+* {
+	transition: all 0.5s ease;
+}
+
+body {
+	background-color: #3caea3;
+}
+
+
+button#openMenu img {
+	max-height: 30px;
+}
+
+div#mainDiv {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+}
+
+div#mainDiv.active {
+	left: -400px;
+}
+
+div#side-menu {
+	position: fixed;
+
+	right: -400px;
+	top: 0;
+	bottom: 0;
+
+	width: 400px;
+	height: 100%;
+
+	background-color: #Ed553b;
+	z-index: 10;
+
+	padding: 20px;
+}
+
+
+div#side-menu.active {
+	right: 0px;
+}
+
+div#side-menu h2 {
+	text-align: center;
+	color: #173f5f;
+
+	text-transform: uppercase;
+
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+div#side-menu ul {
+	width: 100%;
+	list-style-type: none;
+	padding: 0px 20px;
+}
+
+div#side-menu ul li {
+	width: 100%;
+	text-align: center;
+	padding: 13px 0px;
+}
+
+div#side-menu ul li a {
+	color: #f6d55c;
+	text-decoration: none;
+}
+
+div#side-menu ul li a:hover {
+	color: #ffa81d;
+}
+
+
+@media only screen and (max-width: 460px) {
+	div#mainDiv {
+		padding-top: 45px;
+	}
+
+	button#openMenu {
+		position: fixed;
+		right: 10px;
+		top: 16px;
+		z-index: 11;
+	}
+}
